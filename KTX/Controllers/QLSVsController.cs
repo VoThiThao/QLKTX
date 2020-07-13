@@ -80,7 +80,7 @@ namespace KTX.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Cập nhật sinh viên không thành công");
+                    ModelState.AddModelError("", "Mã sinh viên không được sửa ");
                 }
             }
             return View();
