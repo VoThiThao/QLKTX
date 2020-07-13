@@ -10,6 +10,7 @@ namespace Models.EF
     public partial class HOADON
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaHD { get; set; }
 
         [Required]
@@ -21,9 +22,5 @@ namespace Models.EF
         [Required]
         [StringLength(15)]
         public string MaNV { get; set; }
-
-        public virtual NGUOIDUNG NGUOIDUNG { get; set; }
-
-        public virtual PHONG PHONG { get; set; }
     }
 }

@@ -52,7 +52,7 @@ namespace KTX.Models
             try { 
                 var sv = db.PHONGSVs.Select(x => x).Where(x => x.MaSV == entitySinhVien.MaSV).FirstOrDefault();
                 sv.MaPhongSV = entitySinhVien.MaPhongSV;
-                sv.PHONG = entitySinhVien.PHONG;
+                sv.MaPhong = entitySinhVien.MaPhong;
                 sv.ThoiGianBĐ = entitySinhVien.ThoiGianBĐ;
                 sv.ThoiGianKT = entitySinhVien.ThoiGianKT;
                 db.SaveChanges();

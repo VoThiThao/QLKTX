@@ -10,30 +10,19 @@ namespace Models.EF
     public partial class PHONGSV
     {
         [Key]
-        [Required(ErrorMessage = "Vui lòng nhập thông tin!")]
-        [Display(Name = "Mã phòng sinh viên: ")]
         [StringLength(15)]
         public string MaPhongSV { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng nhập thông tin!")]
-        [Display(Name = "Mã phòng: ")]
+        [Required]
         [StringLength(15)]
         public string MaPhong { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng nhập thông tin!")]
-        [Display(Name = "Mã sinh viên: ")]
+        [Required]
         [StringLength(15)]
         public string MaSV { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng nhập thông tin!")]
-        [Display(Name = "Thời gian bắt đầu: ")]
         public DateTime ThoiGianBĐ { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng nhập thông tin!")]
-        [Display(Name = "Thời gian kết thúc: ")]
         public DateTime ThoiGianKT { get; set; }
-        public virtual PHONG PHONG { get; set; }
-
-        public virtual SINHVIEN SINHVIEN { get; set; }
     }
 }

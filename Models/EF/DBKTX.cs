@@ -19,10 +19,13 @@ namespace Models.EF
         public virtual DbSet<PHONG> PHONGs { get; set; }
         public virtual DbSet<PHONGSV> PHONGSVs { get; set; }
         public virtual DbSet<SINHVIEN> SINHVIENs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<DIEN>()
+                .Property(e => e.MaDien)
+                .IsFixedLength();
+
             modelBuilder.Entity<DIEN>()
                 .Property(e => e.MaPhong)
                 .IsFixedLength();
@@ -48,6 +51,10 @@ namespace Models.EF
                 .IsFixedLength();
 
             modelBuilder.Entity<NUOC>()
+                .Property(e => e.MaNuoc)
+                .IsFixedLength();
+
+            modelBuilder.Entity<NUOC>()
                 .Property(e => e.MaPhong)
                 .IsFixedLength();
 
@@ -62,16 +69,6 @@ namespace Models.EF
             modelBuilder.Entity<PHONG>()
                 .Property(e => e.MaCTN)
                 .IsFixedLength();
-
-            modelBuilder.Entity<PHONG>()
-                .HasMany(e => e.HOADONs)
-                .WithRequired(e => e.PHONG)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<PHONG>()
-                .HasMany(e => e.PHONGSVs)
-                .WithRequired(e => e.PHONG)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PHONGSV>()
                 .Property(e => e.MaPhongSV)

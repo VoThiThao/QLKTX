@@ -10,7 +10,8 @@ namespace Models.EF
     public partial class NUOC
     {
         [Key]
-        public int MaNuoc { get; set; }
+        [StringLength(15)]
+        public string MaNuoc { get; set; }
 
         [Required]
         [StringLength(15)]
@@ -23,7 +24,5 @@ namespace Models.EF
         public int CSC { get; set; }
 
         public double DonGia { get; set; }
-
-        public virtual PHONG PHONG { get; set; }
     }
 }

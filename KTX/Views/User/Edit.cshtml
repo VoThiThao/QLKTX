@@ -1,19 +1,16 @@
-﻿@model KTX.Models.NguoiDungModel
-
+﻿@model Models.EF.NGUOIDUNG
 @{
-    ViewBag.Title = "Tạo mới người dùng";
+    ViewBag.Title = "Chỉnh sửa người dùng";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
 
 }
 
 @section header{
     <h3 class="fa fa-user">
-        @Html.ActionLink("Thêm người dùng", "Index")
+        @Html.ActionLink("Sửa người dùng", "Index")
     </h3>
 }
-
-
-
 
 @using (Html.BeginForm())
 {
@@ -25,6 +22,7 @@
                 @Html.ActionLink("Về danh sách", "Index", "NguoiDung", new { @class = "btn btn-primary" })
             </p>
         </div>
+
         <div class="col-md-2 form-group"> </div>
 
         <div class="col-md-8 form-group">
@@ -75,14 +73,14 @@
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Thêm" class="btn btn-primary" />
+                    <input type="submit" value="Sửa" class="btn btn-primary" />
                 </div>
             </div>
         </div>
         <div class="col-md-2 form-group"> </div>
-
     </div>
 
 }
+
 
 

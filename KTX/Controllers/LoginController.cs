@@ -20,24 +20,43 @@ namespace KTX.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
+
         public ActionResult Index(LoginModel user)
         {
             if (ModelState.IsValid)
             {
-                var dao = new UserDAO();
+                var dao = new LoginModel();
                 var result = dao.login(user.TenDangNhap, user.MatKhau);
-                if (result==1)                {
-                    //ModelState.AddModelError("", "Đăng nhập thành công");
-                    Session.Add(Constants.USER_SESSION,user);
-                    return RedirectToAction("Index", "TC");
+
+
+                if (result == null)
+                {
+                    ModelState.AddModelError("", "Vui lòng kiểm tra lại tài khoản");
                 }
+
                 else
                 {
-                    ModelState.AddModelError("", "Đăng nhập không thành công");
+
+                    Session.Add(Constants.USER_SESSION, user);
+                    Session.Add(Constants.USER_ROLE, result.ChucVu);
+                    if (result.ChucVu == 1)
+                    {
+                        return RedirectToAction("Index", "User");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "QLSVs");
+
+                    }
+
                 }
+
             }
             return View("Index");
         }
+
+
+
+
     }
 }

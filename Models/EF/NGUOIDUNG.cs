@@ -1,4 +1,4 @@
-namespace Models.EF
+﻿namespace Models.EF
 {
     using System;
     using System.Collections.Generic;
@@ -9,30 +9,29 @@ namespace Models.EF
     [Table("NGUOIDUNG")]
     public partial class NGUOIDUNG
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NGUOIDUNG()
-        {
-            HOADONs = new HashSet<HOADON>();
-        }
-
+        [Display(Name = "Tên đăng nhập")]
         [StringLength(20)]
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
         public string TenDangNhap { get; set; }
 
-        [Required]
+        [Display(Name = "Mật khẩu")]
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
         [StringLength(20)]
         public string MatKhau { get; set; }
 
+
         [Key]
+        [Display(Name = "Mã NV")]
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
         [StringLength(15)]
         public string MaNV { get; set; }
 
-        [Required]
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập thông tin")]
+        [Display(Name = "Họ tên NV")]
         public string HoTenNV { get; set; }
 
+        [Display(Name = "Chức vụ")]
         public int? ChucVu { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HOADON> HOADONs { get; set; }
     }
 }

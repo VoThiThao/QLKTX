@@ -10,7 +10,8 @@ namespace Models.EF
     public partial class DIEN
     {
         [Key]
-        public int MaDien { get; set; }
+        [StringLength(15)]
+        public string MaDien { get; set; }
 
         [Required]
         [StringLength(15)]
@@ -23,7 +24,5 @@ namespace Models.EF
         public int CSC { get; set; }
 
         public double DonGia { get; set; }
-
-        public virtual PHONG PHONG { get; set; }
     }
 }

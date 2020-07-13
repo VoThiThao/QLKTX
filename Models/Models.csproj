@@ -61,7 +61,6 @@
     <Compile Include="EF\PHONG.cs" />
     <Compile Include="EF\PHONGSV.cs" />
     <Compile Include="EF\SINHVIEN.cs" />
-    <Compile Include="EF\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

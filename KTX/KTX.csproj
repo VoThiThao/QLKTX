@@ -171,6 +171,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\NguoiDungModel.cs" />
     <Compile Include="Models\QLPSVModel.cs" />
     <Compile Include="Models\QLSVsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1200,6 +1201,7 @@
     <Content Include="Views\QLPSV\Index.cshtml" />
     <Content Include="Views\QLPSV\Create.cshtml" />
     <Content Include="Views\QLPSV\Edit.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
