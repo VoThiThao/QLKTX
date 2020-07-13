@@ -9,6 +9,15 @@ namespace Models.EF
     [Table("PHONG")]
     public partial class PHONG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PHONG()
+        {
+            DIENs = new HashSet<DIEN>();
+            HOADONs = new HashSet<HOADON>();
+            NUOCs = new HashSet<NUOC>();
+            PHONGSVs = new HashSet<PHONGSV>();
+        }
+
         [Key]
         [StringLength(15)]
         public string MaPhong { get; set; }
@@ -25,5 +34,17 @@ namespace Models.EF
         [Required]
         [StringLength(15)]
         public string MaCTN { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DIEN> DIENs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOADON> HOADONs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<NUOC> NUOCs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHONGSV> PHONGSVs { get; set; }
     }
 }

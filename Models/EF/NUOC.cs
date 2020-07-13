@@ -24,5 +24,7 @@ namespace Models.EF
         public int CSC { get; set; }
 
         public double DonGia { get; set; }
+
+        public virtual PHONG PHONG { get; set; }
     }
 }

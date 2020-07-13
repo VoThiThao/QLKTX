@@ -31,6 +31,10 @@ namespace Models.EF
                 .IsFixedLength();
 
             modelBuilder.Entity<HOADON>()
+                .Property(e => e.MaHD)
+                .IsFixedLength();
+
+            modelBuilder.Entity<HOADON>()
                 .Property(e => e.MaPhong)
                 .IsFixedLength();
 
@@ -69,6 +73,16 @@ namespace Models.EF
             modelBuilder.Entity<PHONG>()
                 .Property(e => e.MaCTN)
                 .IsFixedLength();
+
+            modelBuilder.Entity<PHONG>()
+                .HasMany(e => e.HOADONs)
+                .WithRequired(e => e.PHONG)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<PHONG>()
+                .HasMany(e => e.PHONGSVs)
+                .WithRequired(e => e.PHONG)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PHONGSV>()
                 .Property(e => e.MaPhongSV)

@@ -24,5 +24,9 @@ namespace Models.EF
         public DateTime ThoiGianBĐ { get; set; }
 
         public DateTime ThoiGianKT { get; set; }
+
+        public virtual PHONG PHONG { get; set; }
+
+        public virtual SINHVIEN SINHVIEN { get; set; }
     }
 }

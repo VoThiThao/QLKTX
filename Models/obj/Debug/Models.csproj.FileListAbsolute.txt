@@ -28,3 +28,15 @@ D:\Desktop\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.xml
 D:\Desktop\QLKTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 D:\Desktop\QLKTX\Models\obj\Debug\Models.dll
 D:\Desktop\QLKTX\Models\obj\Debug\Models.pdb
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\Models.dll.config
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\Models.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\Models.pdb
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.xml
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.pdb
