@@ -22,7 +22,7 @@ MaCTN NCHAR(15)NOT NULL
 )
 
 CREATE TABLE PHONGSV(
-MaPhongSV INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+MaPhongSV NCHAR(15) PRIMARY KEY NOT NULL,
 MaPhong NCHAR(15) NOT NULL,
 MaSV NCHAR(15) NOT NULL,
 ThoiGianBĐ DATETIME NOT NULL,
@@ -34,7 +34,7 @@ ON UPDATE CASCADE
 )
 
 CREATE TABLE DIEN(
-MaDien INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+MaDien NCHAR(15) PRIMARY KEY NOT NULL,
 MaPhong NCHAR(15) NOT NULL,
 NgayGhi DATETIME NOT NULL,
 CSD INT NOT NULL,
@@ -46,7 +46,7 @@ ON UPDATE CASCADE
 )
 
 CREATE TABLE NUOC(
-MaNuoc INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+MaNuoc NCHAR(15) PRIMARY KEY NOT NULL,
 MaPhong NCHAR(15) NOT NULL,
 NgayGhi DATETIME NOT NULL,
 CSD INT NOT NULL,
@@ -68,7 +68,7 @@ UNIQUE(TenDangNhap)
 )
 
 CREATE TABLE HOADON(
-MaHD INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+MaHD NCHAR(15) PRIMARY KEY NOT NULL,
 MaPhong NCHAR(15) NOT NULL,
 NgayGhi DATETIME,
 MaNV NCHAR(15) NOT NULL,
@@ -240,14 +240,14 @@ VALUES  (	N'1',
         )
 
 INSERT INTO dbo.DIEN
-        ( 
+        ( MaDien,
           MaPhong ,
           NgayGhi ,
           CSD ,
           CSC ,
           DonGia
         )
-VALUES  ( 
+VALUES  ( 1,
           N'C1.101' , -- MaPhong - nchar(15)
           '20191015' , -- NgayGhi - datetime
           15 , -- CSD - int
@@ -255,21 +255,21 @@ VALUES  (
           3000.0  -- DonGia - float
         )
 INSERT INTO dbo.DIEN
-        ( 
+        ( MaDien,
           MaPhong ,
           NgayGhi ,
           CSD ,
           CSC ,
           DonGia
         )
-VALUES  ( 
+VALUES  ( 2,
           N'C1.102' , -- MaPhong - nchar(15)
           '20191015' , -- NgayGhi - datetime
           15 , -- CSD - int
           22 , -- CSC - int
           3000.0  -- DonGia - float
         ),
-		( 
+		( 3,
           N'C1.103' , -- MaPhong - nchar(15)
           '20191015' , -- NgayGhi - datetime
           10 , -- CSD - int
@@ -277,28 +277,28 @@ VALUES  (
           3000.0  -- DonGia - float
         )
 INSERT INTO dbo.NUOC
-        ( 
+        ( MaNuoc,
           MaPhong ,
           NgayGhi ,
           CSD ,
           CSC ,
           DonGia
         )
-VALUES  ( 
+VALUES  ( 1,
           N'C1.101' , -- MaPhong - nchar(15)
           '20191015' , -- NgayGhi - datetime
           15 , -- CSD - int
           25 , -- CSC - int
           11000.0  -- DonGia - float
         ),
-		( 
+		( 2,
           N'C1.102' , -- MaPhong - nchar(15)
           '20191015' , -- NgayGhi - datetime
           15 , -- CSD - int
           20 , -- CSC - int
           11000.0  -- DonGia - float
         ),
-		( 
+		( 3,
           N'C1.103' , -- MaPhong - nchar(15)
           '20191015' , -- NgayGhi - datetime
           10 , -- CSD - int
@@ -306,18 +306,18 @@ VALUES  (
           11000.0  -- DonGia - float
         )
 INSERT INTO dbo.HOADON
-        ( MaPhong, NgayGhi, MaNV )
-VALUES  ( 
+        ( MaHD, MaPhong, NgayGhi, MaNV )
+VALUES  ( 1,
           N'C1.101', -- MaPhong - nchar(15)
           '20191020', -- NgayGhi - datetime
           N'QL01'  -- MaNV - nchar(15)
           ),
-		  ( 
+		  (2, 
           N'C1.102', -- MaPhong - nchar(15)
           '20191020', -- NgayGhi - datetime
           N'QL01'  -- MaNV - nchar(15)
           ),
-		  ( 
+		  (3, 
           N'C1.103', -- MaPhong - nchar(15)
           '20191020', -- NgayGhi - datetime
           N'QL01'  -- MaNV - nchar(15)
