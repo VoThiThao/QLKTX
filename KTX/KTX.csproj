@@ -169,6 +169,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HoaDonController.cs" />
+    <Compile Include="Controllers\QLDsController.cs" />
+    <Compile Include="Controllers\QLNsController.cs" />
     <Compile Include="Controllers\QLPSVController.cs" />
     <Compile Include="Controllers\QLSVsController.cs" />
     <Compile Include="Controllers\TCController.cs" />
@@ -182,6 +184,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\NguoiDungModel.cs" />
+    <Compile Include="Models\QLDsModel.cs" />
+    <Compile Include="Models\QLNsModel.cs" />
     <Compile Include="Models\QLPSVModel.cs" />
     <Compile Include="Models\QLSVsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1215,6 +1219,12 @@
     <Content Include="Views\HoaDon\Create.cshtml" />
     <Content Include="Views\HoaDon\Edit.cshtml" />
     <Content Include="Views\HoaDon\Index.cshtml" />
+    <Content Include="Views\QLDs\Create.cshtml" />
+    <Content Include="Views\QLDs\Edit.cshtml" />
+    <Content Include="Views\QLDs\Index.cshtml" />
+    <Content Include="Views\QLNs\Create.cshtml" />
+    <Content Include="Views\QLNs\Edit.cshtml" />
+    <Content Include="Views\QLNs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

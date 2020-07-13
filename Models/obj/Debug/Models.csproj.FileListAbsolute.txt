@@ -40,3 +40,13 @@ C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csproj.CoreCompile
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.dll
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.pdb
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\Models.dll.config
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\Models.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\Models.pdb
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\EntityFramework.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\EntityFramework.xml
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.pdb

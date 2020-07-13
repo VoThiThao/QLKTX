@@ -1,0 +1,80 @@
+﻿@model Models.EF.NUOC
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Header{
+    <h2 class="fa fa-home">
+        @Html.ActionLink("Quản lý nước", "Index", new { /* id=item.PrimaryKey */ })
+    </h2>
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="btn btn-info">
+        <p>
+            @Html.ActionLink("Về danh sách", "Index", new { @class = "btn btn-primary" })
+        </p>
+        </div>
+            <div class="form-horizontal">
+                
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.MaNuoc, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MaNuoc)
+                        @Html.ValidationMessageFor(model => model.MaNuoc)
+                    </div>
+                   
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MaPhong, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.MaPhong)
+                            @Html.ValidationMessageFor(model => model.MaPhong)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NgayGhi, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NgayGhi)
+                            @Html.ValidationMessageFor(model => model.NgayGhi)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CSD, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CSD)
+                            @Html.ValidationMessageFor(model => model.CSD)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CSC, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CSC)
+                            @Html.ValidationMessageFor(model => model.CSC)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DonGia, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DonGia)
+                            @Html.ValidationMessageFor(model => model.DonGia)
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Thêm" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+}

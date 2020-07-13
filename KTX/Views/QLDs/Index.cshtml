@@ -1,0 +1,106 @@
+﻿@model IEnumerable<Models.EF.DIEN>
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    @section Header{
+        <h2 class="fa fa-home">
+           @Html.ActionLink("Quản lý điện", "Index", new { /* id=item.PrimaryKey */ })
+        </h2>
+    }
+                      @using (Html.BeginForm())
+                      {
+                          <div class="col-lg-12 form-group">
+        <div class="col-md-6">
+            <p>
+                @Html.ActionLink("Tạo mới", "Create", "QLDs", new { @class = "btn btn-primary" })
+            </p>
+        </div>
+
+        <div class="col-md-4">
+            <input type="text" value="@ViewBag.SearchString" name="searchString"
+                   placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+        </div>
+
+        <div class="col-md-2">
+            <input type="submit" value="Tìm kiếm" class="btn btn-primary" />
+        </div>
+    </div>
+                      }
+    <table class="table">
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.MaDien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaPhong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayGhi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CSD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CSC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DonGia)
+            </th>
+            <th>
+                Thành tiền
+            </th>
+        </tr>
+
+        @{var i = 1;}
+        @foreach (var item in Model)
+        {
+            <tr id="row_@item.MaDien" >
+                
+                <td>
+                    @item.MaDien
+                </td>
+                <td>
+                    @item.MaPhong
+                </td>
+                <td>
+                    @item.NgayGhi
+                </td>
+                <td>
+                    @item.CSD
+                </td>
+                <td>
+                    @item.CSC
+                </td>
+                <td>
+                    @item.DonGia
+                </td>
+                <td>
+                    @item.ThanhTienD
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { @item.MaDien })|
+                    @Ajax.ActionLink("Xoá", "Delete", new { @MaDien = @item.MaDien }, new AjaxOptions
+                    {
+                        Confirm = "Bạn có muốn xoá thông tin này",
+                        OnComplete = "$('#row_" + @item.MaDien + "').remove()",
+                        HttpMethod = "Delete",
+                        OnSuccess="window.location.reload()"
+                       
+                    })
+
+                </td>
+            </tr>
+            i++;
+            }
+    </table>
+    @*<div class="form-group">
+        <input type="submit" value="Tiền điện:">
+    </div>
+    <div class="form-group">
+        <input type="text" value="@ViewBag.Tinh" name="TinhTien" disabled />
+    </div>*@
+    
