@@ -68,7 +68,11 @@ namespace KTX.Controllers
             if (ModelState.IsValid)
             {
                 var dao = new QLNsModel();
-
+                if (dao.Find(nuoc.MaNuoc) != null)
+                {
+                    SetAlert("Mã nước không sửa được", "error");
+                    return RedirectToAction("Edit", "QLNs");
+                }
                 var result = dao.Update(nuoc);
                 if (result)
                 {

@@ -65,6 +65,7 @@ namespace KTX.Controllers
         public ActionResult Edit(string maDien)
         {
             var dien = new QLDsModel().getByMaDien(maDien);
+            
             return View(dien);
         }
         [HttpPost]
@@ -73,9 +74,14 @@ namespace KTX.Controllers
             if (ModelState.IsValid)
             {
                 var dao = new QLDsModel();
+                if (dao.Find(dien.MaDien) != null)
+                {
+                    SetAlert("Mã điện không sửa được", "error");
+                    return RedirectToAction("Edit", "QLDs");
+                }
 
                 var result = dao.Update(dien);
-                if (result)
+                if (result ==true)
                 {
                     SetAlert("Cập thông tin điện thành công", "success");
                     return RedirectToAction("Index", "QLDs");
