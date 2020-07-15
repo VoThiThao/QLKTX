@@ -297,3 +297,10 @@ C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ClosedXML.pdb
 C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ClosedXML.xml
 C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\DocumentFormat.OpenXml.xml
 C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ExcelNumberFormat.xml
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\ClosedXML.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\DocumentFormat.OpenXml.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\ExcelNumberFormat.dll
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\ClosedXML.pdb
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\ClosedXML.xml
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\DocumentFormat.OpenXml.xml
+C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\ExcelNumberFormat.xml

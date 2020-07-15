@@ -74,11 +74,7 @@ namespace KTX.Controllers
             if (ModelState.IsValid)
             {
                 var dao = new QLDsModel();
-                if (dao.Find(dien.MaDien) != null)
-                {
-                    SetAlert("Mã điện không sửa được", "error");
-                    return RedirectToAction("Edit", "QLDs");
-                }
+               
 
                 var result = dao.Update(dien);
                 if (result ==true)

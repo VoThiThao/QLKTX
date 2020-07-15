@@ -73,6 +73,7 @@ namespace KTX.Models
             catch (Exception e)
             {
                 Console.WriteLine("Sửa không thành công vui lòng kiểm tra lại!", e.Message);
+                return false;
             }
             return true;
         }
