@@ -35,7 +35,6 @@ C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.dll
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.xml
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csprojAssemblyReference.cache
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csproj.CopyComplete
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.dll
@@ -50,3 +49,4 @@ C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\bin\Debug\EntityFramew
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.dll
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.pdb
+C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csprojAssemblyReference.cache

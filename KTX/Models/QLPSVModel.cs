@@ -75,7 +75,11 @@ namespace KTX.Models
             return db.PHONGSVs.Find(MaSV);
 
         }
+        public PHONGSV FindMaPhong(string MaPhong)
+        {
+            return db.PHONGSVs.Find(MaPhong);
 
+        }
         public List<PHONGSV> ListAll()
         {
             return db.PHONGSVs.ToList();

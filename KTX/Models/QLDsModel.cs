@@ -80,7 +80,7 @@ namespace KTX.Models
         {
             return db.DIENs.SingleOrDefault(x => x.MaDien == MaDien);
         }
-
+      
         public DIEN Find(string MaDien)
         {
             return db.DIENs.Find(MaDien);

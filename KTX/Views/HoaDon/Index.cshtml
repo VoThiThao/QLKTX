@@ -1,14 +1,15 @@
 ﻿@model IEnumerable<Models.EF.HOADON>
 
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @section header{
-<h3 class="fa fa-user">
-    @Html.ActionLink("Quản lí hóa đơn", "Index")
-</h3> 
+    <h3 class="fa fa-user">
+        @Html.ActionLink("Quản lí hóa đơn", "Index")
+    </h3>
 }
 @using (Html.BeginForm())
 {
@@ -26,7 +27,7 @@
             }
         </div>
         <div class="col-md-2">
-            <button type="submit"  class="btn btn-primary">Tìm kiếm</button>
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
         </div>
     </div>
 }
@@ -71,6 +72,9 @@
 
                 @Html.DisplayFor(modelItem => item.NgayGhi)
             </td>
+            <td>
+               
+            </td>
             <td></td>
             <td>
                 @Html.ActionLink("Sửa", "Edit", new { @item.MaHD }) |
@@ -91,5 +95,5 @@
 <br /><br />
 <div>
 
-    <a href="@Url.Action("Export","HoaDon")" class="btn btn-primary">Xuất hóa đơn</a>
+    <a href="@Url.Action("ExportExcel","HoaDon")" class="btn btn-primary">Xuất hóa đơn</a>
 </div>

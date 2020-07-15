@@ -44,8 +44,28 @@ namespace KTX.Models
             get;
             set;
         }
-
+        public virtual DIEN DIEN { get; set; }
+        public virtual NUOC NUOC { get; set; }
+        
         // models
+
+        public double tongTien()
+        {
+            QLDsModel qld = new QLDsModel();
+            QLNsModel qln = new QLNsModel();
+            HoaDonModel donModel = new HoaDonModel();
+            double tongTien = 0;
+            
+            if (qld.MaPhong == donModel.MaPhong && qln.MaPhong ==donModel.MaPhong )
+            {
+               
+                 tongTien = ((qld.CSC - qld.CSD) * qld.DonGia) + ((qln.CSC - qln.CSD) * qln.DonGia);
+                return tongTien;
+            }
+            return 0;         
+
+        }
+
         public List<HOADON> listAll()
         {
             return context.HOADONs.ToList();
@@ -64,6 +84,7 @@ namespace KTX.Models
             context.HOADONs.Add(enity);
             context.SaveChanges();
 
+
             return enity.MaHD;
         }
         public HOADON Find(string maHD)
@@ -71,6 +92,7 @@ namespace KTX.Models
             return context.HOADONs.Find(maHD);
 
         }
+       
         public HOADON GetByMaHD(string maHD)
         {
             return context.HOADONs.SingleOrDefault(x => x.MaHD == maHD);

@@ -290,3 +290,10 @@ C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\bin\Microsoft.Owin.Securi
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\obj\Debug\KTX.csprojResolveAssemblyReference.cache
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\obj\Debug\KTX.dll
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\KTX\obj\Debug\KTX.pdb
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ClosedXML.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\DocumentFormat.OpenXml.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ExcelNumberFormat.dll
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ClosedXML.pdb
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ClosedXML.xml
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\DocumentFormat.OpenXml.xml
+C:\Users\Trant\OneDrive\Desktop\QLKTX\KTX\bin\ExcelNumberFormat.xml
