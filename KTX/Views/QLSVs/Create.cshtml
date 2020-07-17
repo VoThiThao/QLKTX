@@ -15,8 +15,8 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="btn btn-primary">
-        <p>
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
             @Html.ActionLink("Về danh sách", "Index", new { /*@class = "btn btn-primary"*/ })
         </p>
     </div>
@@ -26,7 +26,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.MaSV, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.MaSV, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MaSV, "", new { @class = "text-danger" })
             </div>
@@ -34,7 +34,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.HoTen, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.HoTen, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.HoTen, "", new { @class = "text-danger" })
             </div>
@@ -42,7 +42,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.NgaySinh, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.NgaySinh, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
             </div>
@@ -50,7 +50,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.GioiTinh, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.GioiTinh, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })
             </div>
@@ -58,7 +58,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.CMND, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.CMND, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CMND, "", new { @class = "text-danger" })
             </div>
@@ -66,7 +66,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.QueQuan, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.QueQuan, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.QueQuan, "", new { @class = "text-danger" })
             </div>
@@ -74,7 +74,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Lop, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.Lop, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Lop, "", new { @class = "text-danger" })
             </div>
@@ -82,7 +82,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Khoa, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.Khoa, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Khoa, "", new { @class = "text-danger" })
             </div>

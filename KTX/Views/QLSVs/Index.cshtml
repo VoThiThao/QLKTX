@@ -13,17 +13,17 @@
 
 @using (Html.BeginForm())
 {
-    <div class="navbar-form btn btn-primary ">
-        <p>
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
             @Html.ActionLink("Tạo mới", "Create", "", new { /*@class = "btn btn-danger"*/ })
         </p>
-    </div>
-    <div class="navbar-form navbar-right " >
-        <div class="form-group">
-            <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        <div class="navbar-form navbar-right ">
+            <div class="form-group">
+                <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+            </div>
         </div>
     </div>
 }
@@ -89,14 +89,14 @@
             </td>
             <td>
                 @Html.ActionLink("Sửa", "Edit", new { @item.MaSV })|
-                @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV } 
+                @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV }
                 , new AjaxOptions
                     {
                         Confirm = "Bạn có muốn xoá thông tin này",
                         OnComplete = "$('#row_" + item.MaSV + "').remove()",
                         HttpMethod = "Post",
                         OnSuccess = "window.location.reload()"
-                        
+
                     }
                 )
 

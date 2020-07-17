@@ -15,8 +15,8 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="btn btn-primary">
-        <p>
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
             @Html.ActionLink("Về danh sách", "Index", new { /*@class = "btn btn-primary"*/ })
         </p>
     </div>
@@ -65,7 +65,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Lưu" class="btn btn-success" />
+                <input type="submit" value="Lưu" class="btn btn-primary" />
             </div>
         </div>
     </div>

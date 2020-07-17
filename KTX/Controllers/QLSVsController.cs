@@ -15,15 +15,16 @@ namespace KTX.Controllers
     {
         // GET: QLSVs
         public ActionResult Index(string searchString)
-        {   
+        {
             var sv = new QLSVsModel();
-            if (searchString == "") {
+            if (searchString == "")
+            {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "error");
             }
-                var model = sv.ListWhereAll(searchString);
-                @ViewBag.SearchString = searchString;
-                return View(model);
-            
+            var model = sv.ListWhereAll(searchString);
+            @ViewBag.SearchString = searchString;
+            return View(model);
+
         }
         [HttpGet]
         public ActionResult Create()

@@ -50,3 +50,13 @@ C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.cspro
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.dll
 C:\Users\Mai Thanh Phong\OneDrive\Máy tính\QLKTX\Models\obj\Debug\Models.pdb
 C:\Users\Trant\OneDrive\Desktop\QLKTX\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\Models.dll.config
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\Models.dll
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\Models.pdb
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\EntityFramework.dll
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.dll
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\EntityFramework.xml
+D:\Thực hành làm việc nhóm\QLKTX\Models\bin\Debug\EntityFramework.SqlServer.xml
+D:\Thực hành làm việc nhóm\QLKTX\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+D:\Thực hành làm việc nhóm\QLKTX\Models\obj\Debug\Models.dll
+D:\Thực hành làm việc nhóm\QLKTX\Models\obj\Debug\Models.pdb

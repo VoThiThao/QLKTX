@@ -1,6 +1,7 @@
 ﻿using Models.EF;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -41,6 +42,7 @@ namespace KTX.Models
             catch (Exception e)
             {
                 Console.WriteLine("Sửa không thành công vui lòng kiểm tra lại!", e.Message);
+                return false;
             }
             return true;
         }
@@ -85,5 +87,6 @@ namespace KTX.Models
                 Console.WriteLine("Xóa không thành công vui lòng kiểm tra lại!", e.Message);
             }
         }
+
     }
 }

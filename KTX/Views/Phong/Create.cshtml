@@ -1,6 +1,4 @@
-﻿@model KTX.Models.PhongModel
-
-
+﻿@model Models.EF.PHONG
 
 @{
     ViewBag.Title = "Create";
@@ -8,17 +6,17 @@
 }
 
 @section Header{
-    <h2 class="fa fa-home">
+    <h3 class="fa fa-home">
         @Html.ActionLink("Quản lý Phòng", "Index", new { /* id=item.PrimaryKey */ })
-    </h2>
+    </h3>
 }
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <div class="btn btn-info">
-        <p>
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
             @Html.ActionLink("Về danh sách", "Index", new { /*@class = "btn btn-primary"*/ })
         </p>
     </div>
@@ -29,7 +27,7 @@
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.MaPhong, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-7">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.MaPhong, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MaPhong, "", new { @class = "text-danger" })
             </div>
@@ -37,7 +35,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.SoCho, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-7">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.SoCho, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SoCho, "", new { @class = "text-danger" })
             </div>
@@ -45,7 +43,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.TinhTrang, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-7">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.TinhTrang, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TinhTrang, "", new { @class = "text-danger" })
             </div>
@@ -53,7 +51,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.MaCTD, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-7">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.MaCTD, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MaCTD, "", new { @class = "text-danger" })
             </div>
@@ -61,7 +59,7 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.MaCTN, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-7">
+            <div class="col-md-6">
                 @Html.EditorFor(model => model.MaCTN, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.MaCTN, "", new { @class = "text-danger" })
             </div>
@@ -69,7 +67,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Thêm" class="btn btn-primary" />
             </div>
         </div>
     </div>

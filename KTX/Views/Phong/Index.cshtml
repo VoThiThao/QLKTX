@@ -5,25 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Header{
-    <h2 class="fa fa-home">
+    <h3 class="fa fa-home">
         @Html.ActionLink("Quản lý Phòng", "Index", new { /* id=item.PrimaryKey */ })
-    </h2>
+    </h3>
 }
 
 
-<div class="navbar-form btn btn-info ">
-    <p>
-        @Html.ActionLink("Tạo mới", "Create", "", new { /*@class = "btn btn-danger"*/ })
-    </p>
-</div>
+
 @using (Html.BeginForm())
 {
-    <div class="navbar-form navbar-right ">
-        <div class="form-group">
-            <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-success">Tìm kiếm</button>
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
+            @Html.ActionLink("Tạo mới", "Create", "", new { /*@class = "btn btn-danger"*/ })
+        </p>
+        <div class="navbar-form navbar-right ">
+            <div class="form-group">
+                <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+            </div>
         </div>
     </div>
 }
@@ -73,13 +74,13 @@
             </td>
             <td>
                 @Html.ActionLink("Sửa", "Edit", new { @item.MaPhong })|
-                @Ajax.ActionLink("Xoá", "Delete", new { @MaPhong = item.MaPhong}, new AjaxOptions
-                        {
-                            Confirm = "Bạn có muốn xoá thông tin này",
-                            OnComplete = "$('#row_" + item.MaPhong + "').remove()",
-                            HttpMethod = "Delete",
-                            OnSuccess ="window.location.reload()"
-                        })
+                @Ajax.ActionLink("Xoá", "Delete", new { @MaPhong = item.MaPhong }, new AjaxOptions
+                    {
+                        Confirm = "Bạn có muốn xoá thông tin này",
+                        OnComplete = "$('#row_" + item.MaPhong + "').remove()",
+                        HttpMethod = "Delete",
+                        OnSuccess = "window.location.reload()"
+                    })
 
             </td>
 

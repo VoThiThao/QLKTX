@@ -15,15 +15,16 @@ namespace KTX.Controllers
     {
         // GET: QLPSV
         public ActionResult Index(string searchString)
-        {   
+        {
             var sv = new QLPSVModel();
-            if (searchString == "") {
+            if (searchString == "")
+            {
                 SetAlert("Vui lòng nhập nội dung tìm kiếm", "error");
             }
-                var model = sv.ListWhereAll(searchString);
-                @ViewBag.SearchString = searchString;
-                return View(model);
-            
+            var model = sv.ListWhereAll(searchString);
+            @ViewBag.SearchString = searchString;
+            return View(model);
+
         }
         [HttpGet]
         public ActionResult Create()
@@ -46,22 +47,23 @@ namespace KTX.Controllers
             {
                 var dao = new QLPSVModel();
                 var dao1 = new QLSVsModel();
+                var dao2 = new PhongModel();
                 if (dao.Find(sinhVien.MaPhongSV) != null)
                 {
                     SetAlert("Mã phòng sinh viên đã tồn tại", "error");
                     return RedirectToAction("Create", "QLPSV");
                 }
-                if (dao.Find(sinhVien.MaSV) != null)
+                else if (dao.Find(sinhVien.MaSV) != null)
                 {
                     SetAlert("Mã sinh viên này đã có phòng", "error");
                     return RedirectToAction("Create", "QLPSV");
                 }
-                if (dao1.Find(sinhVien.MaSV) == null && dao1.Find(sinhVien.MaPhong) == null)
+                else if (dao1.Find(sinhVien.MaSV) == null && dao2.Find(sinhVien.MaPhong) == null)
                 {
                     SetAlert("Sinh viên hoặc phòng không có trong CSDL", "error");
                     return RedirectToAction("Create", "QLPSV");
                 }
-                
+
                 String result = dao.Insert(sinhVien);
 
                 if (!String.IsNullOrEmpty(result))

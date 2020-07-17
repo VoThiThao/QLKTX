@@ -13,19 +13,20 @@
 
 @using (Html.BeginForm())
 {
-    <div class="navbar-form btn btn-primary ">
-        <p>
+    <div class="navbar-form">
+        <p class="form-group  btn btn-primary">
             @Html.ActionLink("Tạo mới", "Create", "", new { /*@class = "btn btn-danger"*/ })
         </p>
-    </div>
-    <div class="navbar-form navbar-right ">
-        <div class="form-group">
-            <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+        <div class="navbar-form navbar-right ">
+            <div class="form-group">
+                <input type="text" value="@ViewBag.SearchString" name="searchString" placeholder="Nhập từ khoá tìm kiếm" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+            </div>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
-        </div>
     </div>
+
 }
 <table class="table">
     <tr>
@@ -48,31 +49,31 @@
         <th></th>
     </tr>
 
-@{var i = 1;}
-@foreach (var item in Model)
-{
-    <tr>
-        <td>
-            @i
-        </td>
-        <td>
-            @item.MaPhongSV
-        </td>
-        <td>
-            @item.MaPhong
-        </td>
-        <td>
-            @item.MaSV
-        </td>
-        <td>
-            @item.ThoiGianBĐ
-        </td>
-        <td>
-            @item.ThoiGianKT
-        </td>
-        <td>
-            @Html.ActionLink("Sửa", "Edit", new { @item.MaSV })|
-            @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV }, new AjaxOptions
+    @{var i = 1;}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @item.MaPhongSV
+            </td>
+            <td>
+                @item.MaPhong
+            </td>
+            <td>
+                @item.MaSV
+            </td>
+            <td>
+                @item.ThoiGianBĐ
+            </td>
+            <td>
+                @item.ThoiGianKT
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "Edit", new { @item.MaSV })|
+                @Ajax.ActionLink("Xoá", "Delete", new { @MaSV = item.MaSV }, new AjaxOptions
                     {
                         Confirm = "Bạn có muốn xoá thông tin này",
                         OnComplete = "$('#row_" + item.MaSV + "').remove()",
@@ -80,9 +81,9 @@
                         OnSuccess = "window.location.reload()"
                     })
 
-        </td>
-    </tr>
-    i++;
-}
+            </td>
+        </tr>
+        i++;
+    }
 
 </table>

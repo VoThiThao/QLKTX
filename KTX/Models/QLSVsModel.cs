@@ -48,7 +48,7 @@ namespace KTX.Models
             db = new DBKTX();
         }
         public String Insert(SINHVIEN entitySinhVien)
-        {   
+        {
             db.SINHVIENs.Add(entitySinhVien);
             db.SaveChanges();
             return entitySinhVien.MaSV;
@@ -56,7 +56,8 @@ namespace KTX.Models
 
         public bool Update(SINHVIEN entitySinhVien)
         {
-            try { 
+            try
+            {
                 var sv = db.SINHVIENs.Select(x => x).Where(x => x.MaSV == entitySinhVien.MaSV).FirstOrDefault();
                 sv.HoTen = entitySinhVien.HoTen;
                 sv.NgaySinh = entitySinhVien.NgaySinh;
@@ -67,7 +68,7 @@ namespace KTX.Models
                 sv.Khoa = entitySinhVien.Khoa;
                 db.SaveChanges();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("Cập nhật không thành công", e.Message);
                 return false;

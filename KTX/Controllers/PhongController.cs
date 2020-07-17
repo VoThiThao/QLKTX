@@ -1,4 +1,5 @@
 ﻿using KTX.Models;
+using Models.DAO;
 using Models.EF;
 using System;
 using System.Collections.Generic;
@@ -10,14 +11,18 @@ namespace KTX.Controllers
 {
     public class PhongController : BaseController
     {
+
+
         // GET: Phong
+
         public ActionResult Index(string searchString)
         {
+            var sv = new PhongModel();
             if (searchString == "")
             {
                 SetAlert("Vui lòng nhập thông tin tìm kiếm", "error");
             }
-            var sv = new PhongModel();
+
             var model = sv.ListWhereAll(searchString);
             @ViewBag.SearchString = searchString;
             return View(model);
@@ -79,18 +84,10 @@ namespace KTX.Controllers
         }
         public ActionResult Delete(string MaPhong)
         {
-            try
-            {
-                PhongModel ph = new PhongModel();
-                ph.Delete(MaPhong);
-
-                return RedirectToAction("Index", "Phong");
-            }
-            catch (Exception ex)
-            {
-                SetAlert("Phòng này còn có sinh viên ở ", "error");
-                return RedirectToAction("Index", "Phong");
-            }
+            PhongModel ph = new PhongModel();
+            ph.Delete(MaPhong);
+            return RedirectToAction("Index", "Phong");
         }
+
     }
 }

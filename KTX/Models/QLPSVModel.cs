@@ -40,16 +40,17 @@ namespace KTX.Models
             db = new DBKTX();
         }
         public String Insert(PHONGSV entitySinhVien)
-        {   
+        {
             db.PHONGSVs.Add(entitySinhVien);
             try { db.SaveChanges(); }
             catch (Exception e) { Console.WriteLine("Mã sinh viên hoặc mã phòng không có trong CSDL!", e.Message); }
-            return entitySinhVien.MaSV;
+            return entitySinhVien.MaPhongSV;
         }
 
         public bool Update(PHONGSV entitySinhVien)
         {
-            try { 
+            try
+            {
                 var sv = db.PHONGSVs.Select(x => x).Where(x => x.MaSV == entitySinhVien.MaSV).FirstOrDefault();
                 sv.MaPhongSV = entitySinhVien.MaPhongSV;
                 sv.MaPhong = entitySinhVien.MaPhong;
@@ -57,7 +58,7 @@ namespace KTX.Models
                 sv.ThoiGianKT = entitySinhVien.ThoiGianKT;
                 db.SaveChanges();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("Cập nhật không thành công", e.Message);
                 return false;
@@ -75,11 +76,7 @@ namespace KTX.Models
             return db.PHONGSVs.Find(MaSV);
 
         }
-        public PHONGSV FindMaPhong(string MaPhong)
-        {
-            return db.PHONGSVs.Find(MaPhong);
 
-        }
         public List<PHONGSV> ListAll()
         {
             return db.PHONGSVs.ToList();
