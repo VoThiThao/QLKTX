@@ -77,7 +77,12 @@ namespace KTX.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Cập nhật người dùng không thành công");
+                    if(phong.SoCho>8)
+                    {
+                        ModelState.AddModelError("", "Mỗi phòng chỉ có 8 chỗ!");
+                    }
+                    else
+                    ModelState.AddModelError("", "Mã phòng không được sửa");
                 }
             }
             return View();
